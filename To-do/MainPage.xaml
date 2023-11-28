@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="To_do.MainPage">
+
+    <ScrollView >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" HeightRequest="950" Padding="20">
+                <VerticalStackLayout>
+
+                    <HorizontalStackLayout Padding="40,20,0,20" >
+
+                        <Label Text="Název"
+                               FontSize="30"
+                               />
+
+                        <Entry WidthRequest="250"
+                               HeightRequest="30"
+                               FontSize="20"
+                               x:Name="NameEntry"/>
+
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Padding="40,20,0,20" >
+                        <Label Text="Termín"
+                               FontSize="30"/>
+
+                        <DatePicker WidthRequest="250"
+                               HeightRequest="30"
+                               FontSize="20"
+                               x:Name="DPicker"/>
+
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Padding="40,20,0,20" >
+
+                        <Label Text="Průběh"
+                               FontSize="30"/>
+
+                        <Picker x:Name="PrubehPicker" WidthRequest="250"
+                               HeightRequest="30">
+
+                        </Picker>
+
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Padding="40,20,0,20" >
+
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout >
+                        <Button Text="Nový" x:Name="NewBttn" Clicked="NewBttn_Clicked" Margin="50" WidthRequest="75"/>
+                        <Button Text="Uprav" x:Name="EditBttn" Clicked="EditBttn_Clicked" Margin="50" WidthRequest="75"/>
+                        <Button Text="Smaž" x:Name="DeleteBttn" Clicked="DeleteBttn_Clicked" Margin="50" WidthRequest="75"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Grid>
+            <Grid Grid.Column="1" Padding="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" HeightRequest="250" VerticalOptions="Start" Padding="20">
+                    <Border/>
+                    <VerticalStackLayout>
+                        <Label Text="Průběh" FontSize="30"/>
+                        <HorizontalStackLayout>
+                            <CheckBox />
+                            <Label Text="Zadáno" FontSize="30"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <CheckBox />
+                            <Label Text="Rozpracováno" FontSize="30"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <CheckBox />
+                            <Label Text="Dokončeno" FontSize="30"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Grid>
+                <Grid Grid.Column="1" VerticalOptions="Start" Padding="20" HeightRequest="250"  >
+                    <Border/>
+                    <VerticalStackLayout>
+                        <Label Text="Termín" FontSize="30"/>
+                        <HorizontalStackLayout>
+                            <Label Text="Od:" FontSize="30"/>
+                            <DatePicker WidthRequest="125"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <Label Text="Do:" FontSize="30"/>
+                            <DatePicker WidthRequest="125"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Grid>
+                <HorizontalStackLayout HorizontalOptions="Center">
+
+                    <ListView WidthRequest="675" HorizontalOptions="Center" x:Name="Seznam" HeightRequest="350" Background="gray">
+                        
+                    </ListView>
+                </HorizontalStackLayout>
+            </Grid>
+        </Grid>
+
+    </ScrollView>
+
+</ContentPage>
