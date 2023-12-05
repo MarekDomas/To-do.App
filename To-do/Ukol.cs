@@ -8,8 +8,10 @@ namespace To_do
 {
     public class Ukol
     {
-        public string Nazev;
-        public DateTime? Termin;
+        string nazev;
+        public string Nazev { get { return nazev; } }
+        DateTime? termin;
+        public DateTime? Termin { get { return termin; } }
         public enum Pokrok
         {
             Zadáno,
@@ -20,8 +22,8 @@ namespace To_do
         public Pokrok CurrentProgress { get; set; }
         public Ukol(string Nazev, DateTime? Termin, Pokrok Progress)
         {
-            this.Nazev = Nazev;
-            this.Termin = Termin;
+            this.nazev = Nazev;
+            this.termin = Termin;
             this.CurrentProgress = Progress;
         }
 

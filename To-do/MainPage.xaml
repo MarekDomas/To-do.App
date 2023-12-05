@@ -98,8 +98,19 @@
                 </Grid>
                 <HorizontalStackLayout HorizontalOptions="Center">
 
-                    <ListView WidthRequest="675" HorizontalOptions="Center" x:Name="Seznam" HeightRequest="350" Background="gray">
-                        
+                    <ListView WidthRequest="675" HorizontalOptions="Center" x:Name="Seznam" HeightRequest="350" Background="gray" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <HorizontalStackLayout Spacing="10">
+                                        <Label Text="{Binding Nazev}"
+                                               FontAttributes="Bold"/>
+                                        <Label Text="{Binding Termin,StringFormat='{0:dd/MM/yyyy}'}"/>
+                                        <Label Text="{Binding CurrentProgress}"/>
+                                    </HorizontalStackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
                     </ListView>
                 </HorizontalStackLayout>
             </Grid>
