@@ -98,7 +98,7 @@
                 </Grid>
                 <HorizontalStackLayout HorizontalOptions="Center">
 
-                    <ListView WidthRequest="675" HorizontalOptions="Center" x:Name="Seznam" HeightRequest="350" Background="gray" >
+                    <ListView WidthRequest="675" HorizontalOptions="Center" x:Name="Seznam" HeightRequest="350" Background="gray"  >
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
